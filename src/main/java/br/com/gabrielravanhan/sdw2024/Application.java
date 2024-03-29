@@ -1,5 +1,6 @@
 package br.com.gabrielravanhan.sdw2024;
 
+import br.com.gabrielravanhan.sdw2024.application.AskChampionUseCase;
 import br.com.gabrielravanhan.sdw2024.application.ListChampionsUseCase;
 import br.com.gabrielravanhan.sdw2024.domain.ports.ChampionsRepository;
 import org.springframework.boot.SpringApplication;
@@ -13,8 +14,13 @@ public class Application {
         SpringApplication.run(Application.class, args);
     }
 
-	@Bean
+    @Bean
     public ListChampionsUseCase provideListUseCase(ChampionsRepository championsRepository) {
         return new ListChampionsUseCase(championsRepository);
+    }
+
+    @Bean
+    public AskChampionUseCase provideAskUseCase(ChampionsRepository championsRepository) {
+        return new AskChampionUseCase(championsRepository);
     }
 }
