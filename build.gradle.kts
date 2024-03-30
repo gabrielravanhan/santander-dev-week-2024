@@ -5,7 +5,7 @@ plugins {
 }
 
 group = "br.com.gabrielravanhan"
-version = "0.0.1-SNAPSHOT"
+version = "0.0.3-SNAPSHOT"
 
 java {
     sourceCompatibility = JavaVersion.VERSION_21

@@ -7,7 +7,6 @@ public record Champion(
         String lore,
         String imageUrl
 ) {
-
     public String generateContextByQuestion(String question) {
         return """
                 Pergunta: %s

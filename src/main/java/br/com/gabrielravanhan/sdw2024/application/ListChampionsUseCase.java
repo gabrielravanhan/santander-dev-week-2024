@@ -5,9 +5,9 @@ import br.com.gabrielravanhan.sdw2024.domain.ports.ChampionsRepository;
 
 import java.util.List;
 
-public record ListChampionsUseCase(ChampionsRepository championsRepository) {
+public record ListChampionsUseCase(ChampionsRepository repository) {
 
     public List<Champion> findAll() {
-        return championsRepository.findAll();
+        return repository.findAll();
     }
 }
